@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
+# Qutta
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile service-booking marketplace that connects clients with local businesses. Clients discover and book appointments; businesses manage their listing, schedule, and bookings. Built with Expo and React Native.
 
-## Get started
+## Features
 
-1. Install dependencies
+**Onboarding**
+- Role-based sign-up — register as a **client** or a **business**, with email/password and Apple sign-in
 
-   ```bash
-   npm install
-   ```
+**For clients**
+- Discover and search local businesses
+- Book appointments through a guided flow (select service, date, and time)
+- Save favorite businesses
+- Manage upcoming and past bookings
 
-2. Start the app
+**For businesses**
+- Multi-step business onboarding — business info, location, services, staff, and images
+- Dashboard with a bookings overview
+- Schedule and availability management
+- Service menu and waitlist management
 
-   ```bash
-   npx expo start
-   ```
+**Platform**
+- Push notifications (expo-notifications, native-notify)
+- Maps and location
+- Currency selection and localization
 
-In the output, you'll find options to open the app in a
+## Tech stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Framework:** Expo SDK 53, React Native 0.79, Expo Router 5, TypeScript
+- **Data:** TanStack React Query
+- **Maps & location:** react-native-maps, expo-location
+- **Notifications:** expo-notifications, native-notify
+- **Dates:** date-fns, react-native-paper-dates
+- **UI/UX:** Moti, Reanimated, Lottie, Gorhom Bottom Sheet
+- **Auth & storage:** expo-secure-store, expo-apple-authentication
+- **i18n:** expo-localization
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The REST API for this app lives in [qutta-backend](https://github.com/Okekejr/qutta-backend).
 
-## Get a fresh project
-
-When you're ready, run:
+## Getting started
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Open the app in an iOS simulator, Android emulator, or a development build. Create a `.env` file with your API base URL before running.
 
-## Learn more
+### Scripts
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+| Command | Description |
+| ------- | ----------- |
+| `npm start` | Start the Expo dev server |
+| `npm run ios` | Build and run on iOS |
+| `npm run android` | Build and run on Android |
+| `npm run web` | Run in the browser |
+| `npm run lint` | Run ESLint |
